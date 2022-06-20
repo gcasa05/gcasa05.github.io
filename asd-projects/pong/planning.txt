@@ -1,0 +1,38 @@
+User Story / Gameplay
+    Describe the gameplay
+        pong is a game in which, much like the real life sport, two players will be bouncing a ball towards each other using a pseudo paddle (a vertical platform) with the goal of their opponents missing and the ball 
+        going off of the board
+    
+    What are the conditions when the game begins?
+    The conditions when the game begins are that both of the "paddles" are at the middle of their respective sides, and the ball is in the middle 
+
+    Does the game have an end? If so, what are the conditions for when it ends?
+    the game does have an end, when the ball goes off the board, or when the time runs out.
+
+    What ifs will there be?
+        the ifs it will contain cosist of, but are not limited to, if the position of the ball is less than zero (the left edge of the board) have it say game over, 
+        and the same for the right side. if the ball hits the top or bottom of the "board" have it bounce, if the ball hits a "paddle" have it bounce of in the other direction. 
+        if teh "player" presses w, or s , or up, or down, have the "paddle" move up or down virtechally respectively.
+        if a key is pressed register it, and if it is let go register it.
+
+Visual Game Components:
+    What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
+        the visual compoents of the game are the ball, the "paddles" and the board
+    Which will be static? (the board)
+    the board will be static
+    hich will be animated? (the box)
+    The ball and the paddle will be animated
+    What data will you need to manage each game component? For example, in Bouncing Box, the data values were positionX, speedX, and points.
+    positionX positionY SpeedX SpeedY
+
+Events / Logic
+    What events will occur in this game? (timer events, keyboard events, clicking events?)
+        keyboard events and timer event for the game to restart
+
+    How do those events affect the data of the program?\
+        the key registrey ones are crucial to the game aas moving the "paddles would be imposssible without them, and the timer is also an important inclusion but its function
+        can be accomplished through other means, belying its importance a level or two
+
+    For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
+        for the key registery events, it would read the key inputed by accesing a function that has a value for each key pressed and then change the speed or position values 
+        of the "paddles based on which key is pressed. the timer event would be that in the case of there being a game over it would wait a little bit then reset the game.
