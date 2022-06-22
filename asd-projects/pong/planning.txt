@@ -13,7 +13,7 @@ User Story / Gameplay
         the ifs it will contain cosist of, but are not limited to, if the position of the ball is less than zero (the left edge of the board) have it say game over, 
         and the same for the right side. if the ball hits the top or bottom of the "board" have it bounce, if the ball hits a "paddle" have it bounce of in the other direction. 
         if teh "player" presses w, or s , or up, or down, have the "paddle" move up or down virtechally respectively.
-        if a key is pressed register it, and if it is let go register it.
+        if a key is pressed register it, and if it is let go register it. if the reset button is pressed reset the "paddles".
 
 Visual Game Components:
     What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
@@ -23,11 +23,11 @@ Visual Game Components:
     hich will be animated? (the box)
     The ball and the paddle will be animated
     What data will you need to manage each game component? For example, in Bouncing Box, the data values were positionX, speedX, and points.
-    positionX positionY SpeedX SpeedY
+    positionX positionY SpeedX SpeedY position of the "paddles"
 
 Events / Logic
     What events will occur in this game? (timer events, keyboard events, clicking events?)
-        keyboard events and timer event for the game to restart
+        keyboard events and timer/button event for the game to restart, paddles resetting every new round/game
 
     How do those events affect the data of the program?\
         the key registrey ones are crucial to the game aas moving the "paddles would be imposssible without them, and the timer is also an important inclusion but its function
