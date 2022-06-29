@@ -34,17 +34,15 @@ applyFilter();
 // TODO 1, 2 & 4: Create the applyFilter function here
 function applyFilter(){
   for (var r = 0; r < image.length; r++) { 
-    var row = image[r];
     
-    for (var c = 0; c < row.length; c++) { 
+    for (var c = 0; c < image.length; c++) { 
     
     
-   image = rgbString;
-   
+   var rgbString = image[r][c];
    var rgbNumbers = rgbStringToArray(rgbString);
-
    rgbNumbers[RED] = 255;
    rgbString = rgbArrayToString(rgbNumbers);
+   image[r][c] = rgbString;
     }
 
 
