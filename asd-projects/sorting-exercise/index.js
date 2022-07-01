@@ -18,12 +18,14 @@ async function bubbleSort(array) {
         var sorted = false;
         while(sorted !== true){
           sorted = true;
-          for(var i = 0; i <= array.length - 2; i++){
-            if(array[i] > array[i + 1]){
-              swap(i, i + 1, array);
-              
+          for(var i = 0; i < array.length; i++){
+            for(var j = array.length - 1; j = i + 1; j--){
+            if(array[j] < array[j - 1]){
+              swap(j, j - 1, array);
+
               sorted = false;
-            }
+                }
+             }
            
           }
         }
