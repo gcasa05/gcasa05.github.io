@@ -34,16 +34,20 @@ async function quickSort(array, left, right){
 
     if(right - left > 0){
         var index = await partition(array, left, right);
+        if( left < index - 1){
+            await quickSort(array, left, index - 1);
+        }
+        if( right > index){
+            await quickSort(array, index, right);
+        }
          
     }
-         else if( left < index - 1){
-            await quickSort(array, left, index - 1);
+         
     }
-         else if( right > index){
-            await quickSort(array, index, right);
-    }
+         
+    
 
-}
+
 
 // TODOs 4 & 5: Implement partition
 //partition is basically what dicides whate the value inbetween those being sorted is, and the oned above or below it are sorted thereafter

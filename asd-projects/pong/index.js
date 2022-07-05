@@ -46,7 +46,7 @@ function runProgram(){
   }else if (event.which === keys.up){
     paddle2.speedY = 0
   }else if (event.which === keys.down){
-    paddle2.speedY =0
+    paddle2.speedY = 0
   }
 }
 //registers when a key that moves a paddle is pressed down
