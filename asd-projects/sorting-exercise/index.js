@@ -14,13 +14,14 @@ The CSS ids you will work with are:
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
+//swaps the bubbles 
 async function bubbleSort(array) {
           for(var i = 0; i < array.length; i++){
-            for(var j = array.length - 1; j >= i + 1; j--){
-            if(array[j] < array[j - 1]){
-              swap(array, j, j - 1);
-              updateCounter(bubbleCounter);
-                await sleep();
+                for(var j = array.length - 1; j >= i + 1; j--){
+                    if(array[j].value < array[j - 1].value ){
+                        swap(array, j, j - 1);
+                        updateCounter(bubbleCounter);
+                        await sleep();
                 }
              }
           }
@@ -28,12 +29,48 @@ async function bubbleSort(array) {
 
 
 // TODO 3: Implement quickSort
+//quicksorts the bubbles
+async function quickSort(array, left, right){
 
+    if(right - left > 0){
+        var index = await partition(array, left, right);
+         
+    }
+         else if( left < index - 1){
+            await quickSort(array, left, index - 1);
+    }
+         else if( right > index){
+            await quickSort(array, index, right);
+    }
+
+}
 
 // TODOs 4 & 5: Implement partition
+//partition is basically what dicides whate the value inbetween those being sorted is, and the oned above or below it are sorted thereafter
+async function partition(array, left, right){
+debugger//somethings not right with this function ↓ it gives back 5 instead of 7
+    var pivot = array[Math.floor((right + left)/2)].value;
 
 
-// TODO 1: Implement swap
+    while (left < right){
+        while (array[left].value < pivot){
+            left++
+        }
+        while(array[right].value > pivot){
+            right--
+        }
+        if(left < right){
+            swap(array, left, right);
+            updateCounter(quickCounter);
+            await sleep();
+        }
+}
+    return left + 1;
+
+}
+
+// TODO 1: Implement swap\
+//swaps the values in an array
 function swap(array, i, j){
     var temp = array[i];
     array[i] = array[j];
